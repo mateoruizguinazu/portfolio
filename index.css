@@ -1,0 +1,383 @@
+/* ======== RESET & VARIABLES GLOBALES ======== */
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #f0f0f0;
+    --accent-color: #ffffff;
+    --dark-font: 'Darker Grotesque', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--dark-font);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ======== HEADER & NAVEGACIÓN ======== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    z-index: 1001; /* Debe estar por encima del nav */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animación de la hamburguesa a 'X' */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.fullscreen-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(10, 10, 10, 0.95);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.fullscreen-nav.active {
+    transform: translateY(0);
+}
+
+.fullscreen-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.fullscreen-nav li {
+    margin: 2rem 0;
+}
+
+.fullscreen-nav a {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-nav a:hover {
+    color: #888;
+}
+
+
+/* ======== HERO SECTION ======== */
+.hero-section {
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 420px;
+    height: 260px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-layout-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px; 
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.hero-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.title-subtitle-row {
+    display: flex;
+    align-items: flex-end; 
+    gap: 4px; 
+}
+
+.hero-title-svg {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    padding-left: 72px; 
+}
+
+.hero-subtitle {
+    margin-right: 24px;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    align-self: flex-end;
+}
+
+.craft-icon {
+    height: 1.5em;
+    margin: 0 0.5rem;
+}
+
+.craft-highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.craft-highlight svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 150%;
+    z-index: -1;
+}
+
+/* ======== ABOUT SECTION ======== */
+.about-section {
+    display: flex;
+    padding: 10rem 4rem;
+    /* background-color: #f0f0f0;
+    color: #1a1a1a; */
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #0a0a0a;
+    width: fit-content;
+}
+
+.about-text p {
+    font-size: 2rem;
+    line-height: 1.6;
+    max-width: 1000px;
+}
+
+.about-text mark {
+    background-color: white;
+    color: #0a0a0a;
+}
+
+/* El contenedor principal que posicionará ambos elementos */
+.about-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Clave para posicionar los hijos absolutos */
+    min-height: 500px; /* Dale una altura mínima para asegurar el espacio */
+}
+
+/* La forma de fondo (rectángulo amarillo rotado) */
+.background-shape {
+    position: absolute;
+    width: 370px;
+    height: 270px;
+    background-color: #DBF133; /* Color de tu marca */
+    transform: rotate(-40deg);
+    z-index: 1; /* Se asegura que esté por debajo de la imagen */
+}
+
+/* La imagen que se mueve con parallax */
+.parallax-image {
+    position: absolute;
+    width: 100%;
+    max-width: 400px; /* Un poco más grande que la forma */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.2s ease-out; /* Mantiene el movimiento suave */
+    z-index: 2; /* Se asegura que esté por encima de la forma */
+}
+/* ======== MY WORK SECTION ======== */
+.work-section {
+    padding: 6rem 0;
+}
+
+.work-title-container {
+    padding: 0 4rem;
+    margin-bottom: 4rem;
+}
+
+.work-title-container h1 {
+    font-size: 8rem;
+    font-weight: 900;
+}
+/* Este contenedor es necesario para el pin de GSAP */
+.horizontal-scroll-container {
+    height: 100vh; /* La altura que durará el scroll horizontal */
+    overflow: hidden; /* Muy importante */
+}
+
+.projects-track {
+    display: flex;
+    height: 100%;
+    width: 400%; /* 100% por cada uno de los 4 proyectos */
+    will-change: transform;
+}
+
+.project-card {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card img {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.project-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* ======== FUN IDEAS SECTION ======== */
+.fun-ideas-section {
+    padding: 8rem 4rem;
+}
+
+.section-title {
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.idea-card {
+    background-color: #1c1c1c;
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.idea-card:hover {
+    background-color: #2a2a2a;
+}
+
+.idea-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.idea-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.idea-card p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+
+/* ======== FOOTER ======== */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 4rem;
+    border-top: 1px solid #333;
+}
+
+.footer-title img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.footer-links a {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #888;
+}
