@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: "top top",
             end: "bottom top",
             scrub: true,
-            pin: ".hero-section", // Fija la sección hero mientras dura la animación
+            // pin: ".video-section", // Fija la sección hero mientras dura la animación
         },
         width: "100vw",
         height: "100vh",
@@ -75,4 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
 });
+
+
