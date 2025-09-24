@@ -1,7 +1,15 @@
-import {defineConfig} from "vite"
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [
-		
-	]
-})
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        contact: resolve(__dirname, 'contact.html'),
+        projectLoyalty: resolve(__dirname, 'project-loyalty.html'),
+        projectTemplate: resolve(__dirname, 'project-template.html'),
+      },
+    },
+  },
+});
