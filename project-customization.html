@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Customization - Mateo Ruiz Guiñazu</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/style.css">
+    
+    <script>
+      window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="/" class="header-name">Mateo Ruiz Guiñazu</a>
+        <a href="contact.html" class="contact-link">Let’s work together</a>
+    </header>
+
+    <main class="project-main">
+        <section class="project-hero reveal-section">
+            <h1 class="project-title">AI-Powered Recipe Customization</h1>
+            <p class="project-subtitle">A case study on increasing menu variety and user satisfaction by allowing customers to adapt recipes to their dietary needs.</p>
+            <video autoplay loop muted playsinline style="width:100%; border-radius: 8px;">
+                <source src="/public/assets/videos/customization-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <div class="project-layout">
+            <aside class="project-nav-aside">
+                <nav class="project-nav">
+                    <a href="#overview" class="project-nav-link">Overview</a>
+                    <a href="#challenge" class="project-nav-link">The Challenge</a>
+                    <a href="#solution" class="project-nav-link">The Solution</a>
+                    <a href="#experience" class="project-nav-link">The Experience</a>
+                    <a href="#results" class="project-nav-link">Results</a>
+                </nav>
+            </aside>
+
+            <div class="project-content">
+                <section id="overview" class="reveal-section">
+                    <h2>Project Overview</h2>
+                    <p>This project was born from the need to better serve users with specific dietary preferences (vegan, vegetarian, organic) who felt limited by the standard weekly menu. The goal was to increase the perception of variety by allowing users to customize recipes with simple ingredient swaps, leveraging AI to generate adapted recipe images and text, without drastically increasing operational complexity.</p>
+                    <div class="project-details-grid">
+                        <div>
+                            <h3>My Role</h3>
+                            <p>Lead Product Designer</p>
+                        </div>
+                        <div>
+                            <h3>Timeline</h3>
+                            <p>2 Months</p>
+                        </div>
+                        <div>
+                            <h3>Tools</h3>
+                            <p>Figma, UserTesting, AI Prototyping</p>
+                        </div>
+                    </div>
+                    <div class="image-grid-2col">
+                        <img src="/public/assets/images/customization-drawer.png" alt="Static image of customization feature">
+                        <video autoplay loop muted playsinline style="width:100%; border-radius: 4px;">
+                            <source src="/public/assets/videos/customization-aigen.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </section>
+
+                <section id="challenge" class="reveal-section">
+                    <h2>The Challenge</h2>
+                    <p>Cancellation survey data was clear: nearly 15% of users who cancelled in the last year cited a perceived lack of variety as a key reason. My primary challenge as design lead was to address this by increasing options for users with dietary restrictions. However, we had to do this without overwhelming the weekly menu, as flooding the UI with too many choices would create a new pain point for our broader user base. The solution needed to be elegant, discoverable for those who needed it, but unobtrusive for those who didn't.</p>
+                </section>
+                
+                <section id="solution" class="reveal-section">
+                    <h2>The Design Solution</h2>
+                    <p>I designed a model where customization options were discoverable directly within a recipe card. This was achieved through a subtle "nudge" system that signaled availability without causing information overload. We tested the perception of AI-generated recipe images to ensure they met our quality standards. I also designed a smart filtering system that would automatically apply customizations based on user preferences and clearly announce the change, reassuring users that the recipe was adapted specifically for them while maintaining clarity between the original and customized versions.</p>
+                    <img src="/public/assets/images/customization-nudgelogic.png" alt="Diagram of the nudge logic for customization">
+                </section>
+
+                <section id="experience" class="reveal-section">
+                    <h2>The Experience</h2>
+                    <p>The final end-to-end experience allows users to seamlessly discover and apply customizations. The UI nudges are integrated into the main menu, and the customization process itself is simple and intuitive, confirming the changes with new AI-generated visuals and text. This creates a powerful feeling of a personalized menu tailored to individual needs.</p>
+                    <video autoplay loop muted playsinline style="width:100%; border-radius: 8px;">
+                        <source src="/public/assets/videos/customization-flow.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+
+                <section id="results" class="results-section reveal-section">
+                    <h2>What difference was made?</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="icon-wrapper behavior-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+                            </div>
+                            <h3 class="result-title behavior-title">Reduced Churn</h3>
+                            <p class="metric-value">-8 pts</p>
+                            <p class="metric-description">Drop in subscription cancellations due to "lack of variety" just 2 months after release.</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="icon-wrapper revenue-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c2.14-.46 3.5-1.78 3.5-3.97 0-2.11-1.4-3.47-4.2-4.13z"/></svg>
+                            </div>
+                            <h3 class="result-title revenue-title">New Revenue Stream</h3>
+                            <p class="metric-value">+$2.4 million</p>
+                            <p class="metric-description">Generated from the uptake of customized recipes with upselling value.</p>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="icon-wrapper adoption-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </div>
+                            <h3 class="result-title adoption-title">Satisfaction Uplift</h3>
+                            <p class="metric-value">3.2 → 3.9 / 5</p>
+                            <p class="metric-description">Increase in customer satisfaction score for users with dietary restrictions.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="next-projects-section">
+            <h2>Explore More Work</h2>
+            <div class="next-projects-grid">
+                <a href="project-loyalty.html" class="project-card">
+                    <img src="/assets/images/loyalty-card.png" alt="HelloFresh+ Loyalty Program">
+                    <div class="overlay"><div class="overlay-text">VIEW PROJECT</div></div>
+                </a>
+                <a href="/path-to-project-c.html" class="project-card">
+                    <img src="https://placehold.co/600x600/3357FF/FFFFFF?text=Project+C" alt="Project C">
+                    <div class="overlay"><div class="overlay-text">VIEW PROJECT</div></div>
+                </a>
+                <a href="/path-to-project-d.html" class="project-card">
+                    <img src="https://placehold.co/600x600/FF5733/FFFFFF?text=Project+D" alt="Project D">
+                    <div class="overlay"><div class="overlay-text">VIEW PROJECT</div></div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>© Created by Mateo Ruiz Guinazu - Powered by Vercel</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/project-animations.js"></script>
+</body>
+</html>
