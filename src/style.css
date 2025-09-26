@@ -760,6 +760,10 @@ a:hover::after {
     align-self: flex-end; /* Alinea el CTA a la derecha */
 }
 
+.overlay-content {
+    text-align: center;
+}
+
 .project-card:hover .overlay {
     opacity: 1;
 }
