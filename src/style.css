@@ -442,6 +442,12 @@ a:hover::after {
     margin-top: 20px;
 }
 
+.project-content video {
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
 .project-details-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -677,24 +683,81 @@ a:hover::after {
     transition: transform 0.4s ease;
 }
 
+/* --- Reemplaza tus estilos de .overlay y .overlay-text con esto --- */
+
 .project-card .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 0;
     transition: opacity 0.4s ease;
+    
+    /* Nueva estructura con Flexbox para posicionar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el título/tags arriba y el CTA abajo */
+    padding: 24px;
 }
 
-.overlay-text {
-    font-size: 20px;
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: rgba(0, 0, 0, 0.7); /* FIX: Más opaco para mejor contraste */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* FIX: Borde sutil para definir la forma */
+    border-radius: 12px;
+    padding: 4px 10px;
+    font-size: 13px;
     font-weight: 500;
+    color: #efeeec; /* FIX: Color de texto claro por defecto */
+    backdrop-filter: blur(8px); /* FIX: Aumentamos el desenfoque para legibilidad */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* FIX: Sombra para despegar el texto */
+}
+
+.tag-year {
+    background-color: rgba(36, 170, 136, 0.7); /* Un poco más opaco */
+    border-color: rgba(0, 240, 181, 0.4); /* Borde del mismo color */
+    color: #ffffff;
+    text-shadow: none;
+}
+
+
+/* Estilo para los tags siempre visibles */
+.card-tags-visible {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 2; /* Para que esté sobre la imagen */
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+    /* Para que no se active el hover de la tarjeta al pasar por los tags */
+    pointer-events: none; 
+}
+
+.overlay-cta {
+    font-size: 16px;
+    font-weight: 500;
+    align-self: flex-end; /* Alinea el CTA a la derecha */
 }
 
 .project-card:hover .overlay {
