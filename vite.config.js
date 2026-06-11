@@ -9,7 +9,9 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         projectLoyalty: resolve(__dirname, 'project-loyalty.html'),
         projectTemplate: resolve(__dirname, 'project-template.html'),
-        projectCustomization: resolve(__dirname, 'project-customization.html')
+        projectCustomization: resolve(__dirname, 'project-customization.html'),
+        projectCompara: resolve(__dirname, 'project-compara.html'),
+        projectTravelPlatform: resolve(__dirname, 'project-travel-platform.html')
       },
     },
   },

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Label Travel Platform - Mateo Ruiz Guiñazu</title>
+        <link rel="icon" type="image/png" href="/public/assets/images/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/style.css">
+
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="/" class="header-name">Mateo Ruiz Guiñazu</a>
+        <a href="contact.html" class="contact-link">Let’s work together</a>
+    </header>
+
+    <main class="project-main">
+        <!-- Hero Section -->
+        <section class="project-hero reveal-section">
+            <h1 class="project-title">One Codebase, Every Brand</h1>
+            <p class="project-subtitle">A case study on architecting a white-label travel-booking platform — a single frontend that ships a fully-branded, fully-localized product for every client, with brand, language, and features driven entirely by configuration rather than code.</p>
+            <div style="width:100%; aspect-ratio: 21 / 9; border-radius: 8px; background: linear-gradient(120deg, #071133 0%, #0b1f5c 45%, #3a1a6b 100%); display:flex; align-items:center; justify-content:center;">
+                <span style="color:#ffffff; font-weight:600; font-size:clamp(18px, 3vw, 32px); letter-spacing:0.04em; opacity:0.92;">White-Label Travel Platform</span>
+            </div>
+        </section>
+
+        <div class="project-layout">
+            <!-- Sticky Navigation -->
+            <aside class="project-nav-aside">
+                <nav class="project-nav">
+                    <a href="#overview" class="project-nav-link">Overview</a>
+                    <a href="#challenge" class="project-nav-link">The Challenge</a>
+                    <a href="#solution" class="project-nav-link">The Solution</a>
+                    <a href="#results" class="project-nav-link">Results</a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="project-content">
+                <section id="overview" class="reveal-section">
+                    <h2>Project Overview</h2>
+                    <p>I led the ground-up rewrite of a travel-booking frontend into a true white-label platform: a single React monorepo codebase that deploys a distinct, fully-branded experience for multiple enterprise insurance and travel clients. Each client's identity — its theme, language, feature set, and analytics — is injected at build time, so standing up a new brand is a matter of configuration, not new code. Working across the boundary between design and engineering, I built both the design-token system that powers per-brand theming and the architectural conventions that keep the product consistent as it scales across clients.</p>
+                    <div class="project-details-grid">
+                        <div>
+                            <h3>My Role</h3>
+                            <p>Design Engineer</p>
+                        </div>
+                        <div>
+                            <h3>Timeline</h3>
+                            <p>2025 – 2026 (Ongoing)</p>
+                        </div>
+                        <div>
+                            <h3>Focus</h3>
+                            <p>Design Systems, Frontend Architecture, White-Label Platform</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="challenge" class="reveal-section">
+                    <h2>The Challenge</h2>
+                    <p>The product needed to serve several enterprise clients at once, each with its own brand identity, language — including full right-to-left support — and feature requirements. The instinctive approach, forking or hard-coding the app per client, doesn't scale: every new brand multiplies the maintenance surface with duplicated UI, drifting design decisions, and brittle one-off theming. The real challenge was to design a single system where brand, locale, and feature availability are all configuration rather than code, while enforcing an architecture strict enough that quality wouldn't erode as the team and the client list grew.</p>
+                </section>
+
+                <section id="solution" class="reveal-section">
+                    <h2>The Solution</h2>
+                    <p>I architected the platform around three ideas that turn "another client" from a rewrite into a checklist.</p>
+
+                    <h3>Configuration-driven white-labeling</h3>
+                    <p>Every client is expressed as configuration — theme tokens, feature flags, routes, locale, and analytics. Switching the build mode produces a completely branded build of the same application, and onboarding a new client follows a typed checklist the compiler enforces, with no changes to product code.</p>
+
+                    <h3>A two-layer design-token system</h3>
+                    <p>Raw brand primitives — colour scales, typeface, corner radii — feed a layer of automatically-derived semantic tokens. Components only ever reference intent ("primary action," "surface," "body text"), never raw values, so an entirely new brand restyles the whole application by changing its primitives alone. Dark mode and right-to-left layouts are built into the same system rather than bolted on per client.</p>
+
+                    <h3>An architecture that defends itself</h3>
+                    <p>Library boundaries are enforced by lint rules, features and routes register through typed contracts, and an AI-assisted, spec-driven workflow — documented conventions, design briefs, and automated code review — keeps every contribution consistent. The result is a codebase that stays reviewable and coherent as it grows.</p>
+                </section>
+
+                <section id="results" class="results-section reveal-section">
+                    <h2>What’s been built</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="icon-wrapper behavior-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                            </div>
+                            <h3 class="result-title behavior-title">Multi-Tenant by Design</h3>
+                            <p class="metric-value">1 codebase → N brands</p>
+                            <p class="metric-description">A single application serves multiple enterprise clients, each fully branded. Onboarding a new client is configuration, not new code.</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="icon-wrapper revenue-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            </div>
+                            <h3 class="result-title revenue-title">Themeable to the Core</h3>
+                            <p class="metric-value">Multi-brand + RTL</p>
+                            <p class="metric-description">A two-layer token system gives every client its own brand, dark mode, and full right-to-left language support — without touching component code.</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="icon-wrapper adoption-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                            </div>
+                            <h3 class="result-title adoption-title">Built to Scale</h3>
+                            <p class="metric-value">Enforced by design</p>
+                            <p class="metric-description">Lint-enforced module boundaries, typed feature and route registration, and a spec-driven AI workflow keep the growing codebase consistent and reviewable.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Next Projects Section -->
+        <section class="next-projects-section">
+            <h2>Explore More Work</h2>
+            <div class="next-projects-grid">
+                <a href="/project-compara.html" class="project-card">
+                            <img src="/public/assets/images/project-compara.png" alt="Compara Online">
+                            <div class="card-tags-visible">
+                                <span class="tag tag-year">2021</span>
+                                <span class="tag">UX & SEO</span>
+                                <span class="tag">Design Systems</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3 class="overlay-title">Compara Online</h3>
+                                    <span class="overlay-cta">View Project →</span>
+                                </div>
+                            </div>
+                        </a>
+                <a href="project-loyalty.html" class="project-card">
+                            <img src="/public/assets/images/project-loyalty.png" alt="HelloFresh+ Loyalty Program">
+                            <div class="card-tags-visible">
+                                <span class="tag tag-year">2024</span>
+                                <span class="tag">Engagement</span>
+                                <span class="tag">Gamification</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3 class="overlay-title">Loyalty Program</h3>
+                                    <span class="overlay-cta">View Project →</span>
+                                </div>
+                            </div>
+                        </a>
+                <a href="./project-customization.html" class="project-card">
+                            <img src="/public/assets/images/project-customization.png" alt="Recipe Customization">
+                            <div class="card-tags-visible">
+                                <span class="tag tag-year white">2025</span>
+                                <span class="tag white">GenAI</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h3 class="overlay-title">Recipe Customization</h3>
+                                    <span class="overlay-cta">View Project →</span>
+                                </div>
+                            </div>
+                        </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>© Created by Mateo Ruiz Guinazu - Powered by Vercel</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/project-animations.js"></script>
+</body>
+</html>
